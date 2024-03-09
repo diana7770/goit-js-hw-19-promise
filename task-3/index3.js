@@ -5,16 +5,6 @@ const randomIntegerFromInterval = (min, max) => {
 const makeTransaction = (transaction, onSuccess, onError) => {
   const delay = randomIntegerFromInterval(200, 500);
 
-  setTimeout(() => {
-    const canProcess = Math.random() > 0.3;
-
-    if (canProcess) {
-      onSuccess(transaction.id, delay);
-    } else {
-      onError(transaction.id);
-    }
-  }, delay);
-
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       const canProcess = Math.random() > 0.3;
@@ -39,10 +29,10 @@ const logError = ({ id }) => {
 /*
  * Працює так
  */
-makeTransaction({ id: 70, amount: 150 }, logSuccess, logError);
-makeTransaction({ id: 71, amount: 230 }, logSuccess, logError);
-makeTransaction({ id: 72, amount: 75 }, logSuccess, logError);
-makeTransaction({ id: 73, amount: 100 }, logSuccess, logError);
+// makeTransaction({ id: 70, amount: 150 }, logSuccess, logError);
+// makeTransaction({ id: 71, amount: 230 }, logSuccess, logError);
+// makeTransaction({ id: 72, amount: 75 }, logSuccess, logError);
+// makeTransaction({ id: 73, amount: 100 }, logSuccess, logError);
 
 //  * Повинно працювати так
 //  */

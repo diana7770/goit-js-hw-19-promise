@@ -20,8 +20,8 @@ const logger = (updatedUsers) => console.table(updatedUsers);
 /*
  * Зараз працює так
  */
-toggleUserState(users, "Mango", logger);
-toggleUserState(users, "Lux", logger);
+// toggleUserState(users, "Mango", logger);
+// toggleUserState(users, "Lux", logger);
 
 /*
  * Повинно працювати так
